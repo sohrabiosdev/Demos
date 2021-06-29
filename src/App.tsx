@@ -7,24 +7,26 @@
  */
 
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 import Home from './screens/Home';
+import HappinessButton from "./components/HappinessButton";
 
 const Stack = createStackNavigator();
 
 function MyStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Demos" component={Home} />
-    </Stack.Navigator>
-  );
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Demos" component={ Home }/>
+        </Stack.Navigator>
+    );
 }
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <MyStack />
-    </NavigationContainer>
-  );
+    return (
+        <NavigationContainer>
+            <MyStack/>
+            <HappinessButton/>
+        </NavigationContainer>
+    );
 }
